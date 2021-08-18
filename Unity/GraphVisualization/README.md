@@ -1,6 +1,6 @@
 # Ein erstes Beispiel für die Visualierung eines Graphen
 
-![Königsberger Brückenproblem](http://webhome.hs-kl.de/~brill/Assets/images/koenigsberg3D.png)
+![Eine erste Visualisierung](https://github.com/VRLAB-HSKL/Graphentheorie/blob/develop/Unity/GraphVisualization/capture.jpg)
 
 In der Adjazenzmatrix oder der Adjazenzliste ist keinerlei Information vorhanden wo die Knoten im
 Graphen liegen. Wir haben nur die Struktur des Graphen - welcher Knoten mit welchem Knoten verbunden ist.
