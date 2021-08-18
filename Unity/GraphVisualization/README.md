@@ -1,4 +1,4 @@
-# Ein erstes Beispiel für die Visualierung eines Graphen
+# Ein erstes Beispiel für die Visualisierung eines Graphen
 
 ![Eine erste Visualisierung](https://github.com/VRLAB-HSKL/Graphentheorie/blob/develop/Unity/GraphVisualization/capture.jpg)
 
