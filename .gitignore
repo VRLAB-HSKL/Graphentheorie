@@ -2,8 +2,8 @@
 # Keine ignores für VR-Assets wie Steam
 
 # Vi and VIM Backup Files
-*~
-*.swp
+**/*~
+.*.swp
 
 # Andere Unity Verzeichnisse
 **/Library/*
@@ -18,29 +18,28 @@
 # Wenn wir diese Verzeichnisse jedes mal in Git schreiben wird das repo
 # redundante Informationen enthalten, was vermieden werden soll.
 **/Assets/MiddleVR/*
+**/Assets/MiddleVR.meta
 **/Assets/SteamVR/*
 **/Assets/GoogleVR/*
+**/Assets/GoogleVR.meta
 **/Assets/SteamVR_Input/**/*
 **/Assets/HTC.UnityPlugin/*
 **/Assets/HTC.UnityPlugin.meta
 **/Assets/HTC.UnityPlugin/ViveInputUtility/*
 **/Assets/VIUSettings.meta
 **/Assets/VIUSettings/*
+# Wave3D für Focus Plus ignorieren
+**/Assets/WaveVR/**/*
+**/Assets/Plugins
 # MBU package ignorieren
 **/Assets/MBU/**/*
 **/Assets/MBU/
 **/Assets/MBU.meta
-**/Assets/Plugins
+
 
 # FirstPerson von MVR und von Unity ignorieren
 **/Assets/MiddleVR_First*/*
 **/Assets/Standard Assets/*
-# Unity Meta-Files
-**/Assets/MiddleVR.meta
-**/Assets/GoogleVR.meta
-**/Assets/HTC.UnityPlugin.meta
-# Wave3D für Focus Plus ignorieren
-**/Assets/WaveVR/**/*
 
 # Prerequisites
 *.d
@@ -103,9 +102,9 @@ ExportedObj/
 *.opendb
 
 # Unity3D generated  files
-*.pidb.meta
-*.pdb.meta
-*.asset	
+**/*.pidb.meta
+**/*.pdb.meta
+**/*.asset	
 
 # Unity3D Generated File On Crash Reports
-sysinfo.txt
+**/sysinfo.txt
