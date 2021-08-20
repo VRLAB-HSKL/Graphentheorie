@@ -25,7 +25,7 @@ Für die Datenstrukturen und die Darstellungen verwenden wir das Observer-Patter
 Literatur:
 
 - Manfred Brill, Mathematik für Informatiker, Hanser Verlag
-- Matthias Schubert, Mathematik für Informatiker, ![E-Book](https://link.springer.com/book/10.1007%2F978-3-8348-1995-6), Vieweg+Teubner
+- Matthias Schubert, Mathematik für Informatiker, [E-Book](https://link.springer.com/book/10.1007%2F978-3-8348-1995-6), Vieweg+Teubner
 
 Im Buch von Schubert, das in der Bibliothek vorhanden ist, gibt es bereits C#-Quellen, die wir verwenden können!
 
