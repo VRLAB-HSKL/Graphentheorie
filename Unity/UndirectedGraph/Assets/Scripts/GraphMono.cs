@@ -3,6 +3,9 @@ using UnityEngine;
 using UnityEngine.UI;
 
 namespace GraphContent
+    /// <summary>
+    /// This Class could be attached to the Gameobject which enables the given parameter.
+    /// </summary>
 {
     public class GraphMono : MonoBehaviour
     {
@@ -19,14 +22,10 @@ namespace GraphContent
             ProvideInputs();
 
         }
-
-        private void LateUpdate()
-        {
-            Debug.Log(_Graph.ToString());
-        }
+        
         public void ProvideInputs()
         {
-            var graph = new Graph("Test");
+            var graph = new Graph(Name);
 
             var a = graph.CreateRoot("A");
             var b = graph.CreateNode("B");
@@ -85,14 +84,11 @@ namespace GraphContent
                 .AddEdge(p);
 
             n.AddEdge(p);
+            
 
-            // o - Already added
+            int?[,] adj = graph.CreateAdjacencyMatrix(); 
 
-            // p - Already added
-
-            int?[,] adj = graph.CreateAdjacencyMatrix(); // We're going to implement that down below
-
-            PrintMatrix(ref adj, graph._allNodes.Count); // We're going to implement that down below
+            PrintMatrix(ref adj, graph._allNodes.Count); 
         }
 
         private void PrintMatrix(ref int?[,] matrix, int Count)
