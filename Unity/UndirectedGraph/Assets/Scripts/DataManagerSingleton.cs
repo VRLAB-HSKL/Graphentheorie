@@ -1,5 +1,9 @@
 ﻿namespace GraphContent
 {
+///
+///Singleton Class which Saves the Data
+///
+
     public class DataManagerSingleton
     {
         private static DataManagerSingleton _instance = null;
