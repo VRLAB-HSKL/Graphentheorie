@@ -1,31 +1,12 @@
 ﻿using System;
-using UnityEngine;
-using UnityEngine.UI;
 
 namespace GraphContent
-    /// <summary>
-    /// This Class could be attached to the Gameobject which enables the given parameter.
-    /// </summary>
 {
-    public class GraphMono : MonoBehaviour
+    public class PrintMain
     {
-        public Graph _Graph;
-        public string Name;
-        public string rootName;
-        public Text matrixText;
-        
-
-        private void Start()
+        public static void Main(string[] args)
         {
-            _Graph = new Graph(Name);
-            _Graph.CreateRoot(rootName);
-            ProvideInputs();
-
-        }
-        
-        public void ProvideInputs()
-        {
-            var graph = new Graph(Name);
+            var graph = new Graph("Test");
 
             var a = graph.CreateRoot("A");
             var b = graph.CreateNode("B");
@@ -84,47 +65,50 @@ namespace GraphContent
                 .AddEdge(p);
 
             n.AddEdge(p);
-            
 
-            int?[,] adj = graph.CreateAdjacencyMatrix(); 
+            // o - Already added
 
-            PrintMatrix(ref adj, graph._allNodes.Count); 
+            // p - Already added
+
+            int?[,] adj = graph.CreateAdjacencyMatrix(); // We're going to implement that down below
+
+            PrintMatrix(ref adj, graph._allNodes.Count); // We're going to implement that down below
         }
 
-        private void PrintMatrix(ref int?[,] matrix, int Count)
+        private static void PrintMatrix(ref int?[,] matrix, int Count)
         {
-            matrixText.text += "   ";
+            Console.Write("       ");
             for (int i = 0; i < Count; i++)
             {
-                matrixText.text +=  "  "+ (char)('A' + i);
+                Console.Write("{0}  ", (char)('A' + i));
             }
 
-            matrixText.text += "\r\n"; 
+            Console.WriteLine();
 
             for (int i = 0; i < Count; i++)
             {
-                matrixText.text += " | [ "+ (char)('A' + i);
+                Console.Write("{0} | [ ", (char)('A' + i));
 
                 for (int j = 0; j < Count; j++)
                 {
                     if (i == j)
                     {
-                        matrixText.text +=" &,";
+                        Console.Write(" &,");
                     }
                     else if (matrix[i, j] == null)
                     {
-                        matrixText.text +=" .,";
+                        Console.Write(" .,");
                     }
                     else
                     {
-                        matrixText.text += " ,"+ matrix[i, j];
+                        Console.Write(" {0},", matrix[i, j]);
                     }
                 }
 
-                matrixText.text += " ]\r\n";
+                Console.Write(" ]\r\n");
             }
 
-            matrixText.text += "\r\n";
+            Console.Write("\r\n");
         }
     }
 }
