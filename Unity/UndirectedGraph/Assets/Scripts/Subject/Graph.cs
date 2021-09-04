@@ -67,7 +67,40 @@ public class Graph
 
         return adj;
     }
+    /// <summary>
+    /// Creates Adjacency List from the Nodes and Root
+    /// </summary>
+    /// <returns>List of int values</returns>
+    public List<List<int>> CreateAdjacencyList()
+    {
+        List<List<int>> result = new List<List<int>>();
 
+        for (int i = 0; i < _allNodes.Count; i++)
+        {
+            List<int> temp = new List<int>();
+            Node n1 = _allNodes[i];
+            for (int j = 0; j < _allNodes.Count; j++)
+            {
+                Node n2 = _allNodes[j];
+                var edge = n1.Edges.FirstOrDefault(a => a.Child == n2);
+
+                if (edge != null)
+                {
+                    temp.Add(1);
+                }
+                else
+                {
+                    temp.Add(0);
+                }
+                
+            }
+            
+            result.Add(temp);
+        }
+
+        return result;
+
+    }
     public override string ToString()
     {
         return "Name " + _name + "AllNodes " + _allNodes.ToString();

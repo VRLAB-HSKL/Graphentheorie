@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -89,6 +90,11 @@ namespace GraphContent
             int?[,] adj = graph.CreateAdjacencyMatrix(); 
 
             PrintMatrix(ref adj, graph._allNodes.Count); 
+            
+            //For the List Print
+            Console.WriteLine("--------------List Print----------------");
+            List<List<int>> res = graph.CreateAdjacencyList();
+            PrintMain.PrintList(res);
         }
 
         private void PrintMatrix(ref int?[,] matrix, int Count)
