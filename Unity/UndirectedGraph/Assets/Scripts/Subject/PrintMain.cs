@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace GraphContent
 {
@@ -66,15 +67,16 @@ namespace GraphContent
 
             n.AddEdge(p);
 
-            // o - Already added
+            int?[,] adj = graph.CreateAdjacencyMatrix();
 
-            // p - Already added
-
-            int?[,] adj = graph.CreateAdjacencyMatrix(); // We're going to implement that down below
-
-            PrintMatrix(ref adj, graph._allNodes.Count); // We're going to implement that down below
+            PrintMatrix(ref adj, graph._allNodes.Count);
         }
 
+        /// <summary>
+        ///  Prints the provided matrix 
+        /// </summary>
+        /// <param name="matrix"></param>
+        /// <param name="Count"></param>
         private static void PrintMatrix(ref int?[,] matrix, int Count)
         {
             Console.Write("       ");
@@ -109,6 +111,16 @@ namespace GraphContent
             }
 
             Console.Write("\r\n");
+        }
+
+        public static void PrintList(List<List<int>> list)
+        {
+            foreach (var val in list)
+            {
+                var text = "[ ";
+                val.ForEach(item => { text += item + " , "; });
+                Console.WriteLine(text + " ]");
+            }
         }
     }
 }
