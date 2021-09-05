@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Manager;
 using Subject;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,6 +18,8 @@ namespace GraphContent
         public Text matrixText;
         public string JsonFileName;
         private DataManagerSingleton dataMgmt = DataManagerSingleton.Instance;
+
+        private Graph graph;
         
 
         private void Start()
@@ -33,11 +36,16 @@ namespace GraphContent
             var getM = dataMgmt.SaveJsonData(m);
             Debug.Log(getM);
             dataMgmt.SaveJsonFile(m);
+
+            JsonDataSerializer jsonDataSerializer = new JsonDataSerializer(JsonFileName);
+            jsonDataSerializer.SaveJsonFile(graph.CreateAdjacencyList());
+            
+            Debug.Log(jsonDataSerializer.LoadJsonFile());
         }
         
         public void ProvideInputs()
         {
-            var graph = new Graph(Name);
+            graph = new Graph(Name);
 
             var a = graph.CreateRoot("A");
             var b = graph.CreateNode("B");

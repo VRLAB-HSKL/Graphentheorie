@@ -335,6 +335,7 @@ MonoBehaviour:
   Name: GraphTest
   rootName: Square
   matrixText: {fileID: 304177629}
+  JsonFileName: nodes
 --- !u!4 &681924212
 Transform:
   m_ObjectHideFlags: 0
