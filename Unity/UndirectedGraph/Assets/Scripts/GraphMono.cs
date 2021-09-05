@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Subject;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,6 +15,8 @@ namespace GraphContent
         public string Name;
         public string rootName;
         public Text matrixText;
+        public string JsonFileName;
+        private DataManagerSingleton dataMgmt = DataManagerSingleton.Instance;
         
 
         private void Start()
@@ -21,7 +24,15 @@ namespace GraphContent
             _Graph = new Graph(Name);
             _Graph.CreateRoot(rootName);
             ProvideInputs();
+            var temp = dataMgmt.ParseInFile();
+            Debug.Log("Name : "+temp.Name + " , Size : " + temp.Size);
 
+            Matrix m = new Matrix();
+            m.Name = "Test Matrix";
+            m.Size = 10;
+            var getM = dataMgmt.SaveJsonData(m);
+            Debug.Log(getM);
+            dataMgmt.SaveJsonFile(m);
         }
         
         public void ProvideInputs()
