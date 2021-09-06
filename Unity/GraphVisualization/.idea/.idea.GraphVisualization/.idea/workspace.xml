@@ -4,11 +4,179 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0270104b-2a67-4f66-a2eb-ef6fb66e2564" name="Changes" comment="" />
+    <list default="true" id="0270104b-2a67-4f66-a2eb-ef6fb66e2564" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Resources.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/json.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/json/matrix.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/json/matrix.json.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/json/nodes.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/json/nodes.json.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/json/smallGraph.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/json/smallGraph.json.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/json/template.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/json/template.json.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UndirectedGraph.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Materials.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Materials/EdgeLine.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Materials/EdgeLine.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Materials/Floor.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Materials/Floor.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Materials/Nodes.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Materials/Nodes.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Prefabs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Prefabs/Edge3D.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Prefabs/Edge3D.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Prefabs/GenerateNodes.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Prefabs/GenerateNodes.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Prefabs/MatrixManager.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Prefabs/MatrixManager.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Prefabs/Node3D.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Prefabs/Node3D.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Prefabs/NodeViewManager.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Prefabs/NodeViewManager.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Scenes.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Scenes/MatrixView.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Scenes/MatrixView.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/DataManagerSingleton.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/DataManagerSingleton.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/GraphGen.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/GraphGen/AnswersManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/GraphGen/AnswersManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/GraphGen/Create3DNode.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/GraphGen/Create3DNode.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/GraphMono.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/GraphMono.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/Manager.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/Manager/JsonDataSerializer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/Manager/JsonDataSerializer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/Subject.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/Subject/Edge.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/Subject/Edge.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/Subject/Graph.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/Subject/Graph.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/Subject/Matrix.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/Subject/Matrix.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/Subject/Node.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/Subject/Node.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/Subject/PrintMain.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/Subject/PrintMain.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/UI.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/UI/MenuManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/UI/MenuManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UndirectedGraph/Assets/UndirectedGraph.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UndirectedGraph/Assets/UndirectedGraph/Materials.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UndirectedGraph/Assets/UndirectedGraph/Materials/EdgeLine.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UndirectedGraph/Assets/UndirectedGraph/Materials/EdgeLine.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UndirectedGraph/Assets/UndirectedGraph/Materials/Floor.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UndirectedGraph/Assets/UndirectedGraph/Materials/Floor.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UndirectedGraph/Assets/UndirectedGraph/Materials/Nodes.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UndirectedGraph/Assets/UndirectedGraph/Materials/Nodes.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UndirectedGraph/Assets/UndirectedGraph/Prefabs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UndirectedGraph/Assets/UndirectedGraph/Prefabs/Edge3D.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UndirectedGraph/Assets/UndirectedGraph/Prefabs/Edge3D.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UndirectedGraph/Assets/UndirectedGraph/Prefabs/Node3D.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UndirectedGraph/Assets/UndirectedGraph/Prefabs/Node3D.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UndirectedGraph/Assets/UndirectedGraph/Resources.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UndirectedGraph/Assets/UndirectedGraph/Resources/json.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UndirectedGraph/Assets/UndirectedGraph/Resources/json/matrix.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UndirectedGraph/Assets/UndirectedGraph/Resources/json/matrix.json.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UndirectedGraph/Assets/UndirectedGraph/Resources/json/nodes.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UndirectedGraph/Assets/UndirectedGraph/Resources/json/nodes.json.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UndirectedGraph/Assets/UndirectedGraph/Resources/json/smallGraph.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UndirectedGraph/Assets/UndirectedGraph/Resources/json/smallGraph.json.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UndirectedGraph/Assets/UndirectedGraph/Resources/json/template.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UndirectedGraph/Assets/UndirectedGraph/Resources/json/template.json.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UndirectedGraph/Assets/UndirectedGraph/Scenes.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UndirectedGraph/Assets/UndirectedGraph/Scenes/MatrixView.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UndirectedGraph/Assets/UndirectedGraph/Scenes/MatrixView.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UndirectedGraph/Assets/UndirectedGraph/Scripts.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UndirectedGraph/Assets/UndirectedGraph/Scripts/DataManagerSingleton.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UndirectedGraph/Assets/UndirectedGraph/Scripts/DataManagerSingleton.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UndirectedGraph/Assets/UndirectedGraph/Scripts/GraphGen.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UndirectedGraph/Assets/UndirectedGraph/Scripts/GraphGen/Create3DNode.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UndirectedGraph/Assets/UndirectedGraph/Scripts/GraphGen/Create3DNode.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UndirectedGraph/Assets/UndirectedGraph/Scripts/GraphMono.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UndirectedGraph/Assets/UndirectedGraph/Scripts/GraphMono.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UndirectedGraph/Assets/UndirectedGraph/Scripts/Manager.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UndirectedGraph/Assets/UndirectedGraph/Scripts/Manager/JsonDataSerializer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UndirectedGraph/Assets/UndirectedGraph/Scripts/Manager/JsonDataSerializer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UndirectedGraph/Assets/UndirectedGraph/Scripts/Subject.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UndirectedGraph/Assets/UndirectedGraph/Scripts/Subject/Edge.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UndirectedGraph/Assets/UndirectedGraph/Scripts/Subject/Edge.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UndirectedGraph/Assets/UndirectedGraph/Scripts/Subject/Graph.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UndirectedGraph/Assets/UndirectedGraph/Scripts/Subject/Graph.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UndirectedGraph/Assets/UndirectedGraph/Scripts/Subject/Matrix.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UndirectedGraph/Assets/UndirectedGraph/Scripts/Subject/Matrix.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UndirectedGraph/Assets/UndirectedGraph/Scripts/Subject/Node.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UndirectedGraph/Assets/UndirectedGraph/Scripts/Subject/Node.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UndirectedGraph/Assets/UndirectedGraph/Scripts/Subject/PrintMain.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UndirectedGraph/Assets/UndirectedGraph/Scripts/Subject/PrintMain.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UndirectedGraph/Assets/UndirectedGraph/Scripts/UI.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UndirectedGraph/Assets/UndirectedGraph/Scripts/UI/MenuManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UndirectedGraph/Assets/UndirectedGraph/Scripts/UI/MenuManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GraphVisualization/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GraphVisualization/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Exercise-1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Exercise-1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UndirectedGraph/Assets/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UndirectedGraph/Assets/Materials/EdgeLine.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UndirectedGraph/Assets/Materials/EdgeLine.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UndirectedGraph/Assets/Materials/Floor.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UndirectedGraph/Assets/Materials/Floor.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UndirectedGraph/Assets/Materials/Nodes.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UndirectedGraph/Assets/Materials/Nodes.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UndirectedGraph/Assets/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UndirectedGraph/Assets/Prefabs/Edge3D.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UndirectedGraph/Assets/Prefabs/Edge3D.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UndirectedGraph/Assets/Prefabs/Node3D.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UndirectedGraph/Assets/Prefabs/Node3D.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UndirectedGraph/Assets/Resources.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UndirectedGraph/Assets/Resources/json.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UndirectedGraph/Assets/Resources/json/matrix.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UndirectedGraph/Assets/Resources/json/matrix.json.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UndirectedGraph/Assets/Resources/json/nodes.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UndirectedGraph/Assets/Resources/json/nodes.json.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UndirectedGraph/Assets/Resources/json/smallGraph.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UndirectedGraph/Assets/Resources/json/smallGraph.json.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UndirectedGraph/Assets/Resources/json/template.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UndirectedGraph/Assets/Resources/json/template.json.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UndirectedGraph/Assets/Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UndirectedGraph/Assets/Scenes/MatrixView.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UndirectedGraph/Assets/Scenes/MatrixView.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UndirectedGraph/Assets/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UndirectedGraph/Assets/Scripts/DataManagerSingleton.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UndirectedGraph/Assets/Scripts/DataManagerSingleton.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UndirectedGraph/Assets/Scripts/GraphGen.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UndirectedGraph/Assets/Scripts/GraphGen/Create3DNode.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UndirectedGraph/Assets/Scripts/GraphGen/Create3DNode.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UndirectedGraph/Assets/Scripts/GraphMono.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UndirectedGraph/Assets/Scripts/GraphMono.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UndirectedGraph/Assets/Scripts/Manager.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UndirectedGraph/Assets/Scripts/Manager/JsonDataSerializer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UndirectedGraph/Assets/Scripts/Manager/JsonDataSerializer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UndirectedGraph/Assets/Scripts/Subject.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UndirectedGraph/Assets/Scripts/Subject/Edge.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UndirectedGraph/Assets/Scripts/Subject/Edge.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UndirectedGraph/Assets/Scripts/Subject/Graph.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UndirectedGraph/Assets/Scripts/Subject/Graph.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UndirectedGraph/Assets/Scripts/Subject/Matrix.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UndirectedGraph/Assets/Scripts/Subject/Matrix.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UndirectedGraph/Assets/Scripts/Subject/Node.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UndirectedGraph/Assets/Scripts/Subject/Node.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UndirectedGraph/Assets/Scripts/Subject/PrintMain.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UndirectedGraph/Assets/Scripts/Subject/PrintMain.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UndirectedGraph/Assets/Scripts/UI.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UndirectedGraph/Assets/Scripts/UI/MenuManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UndirectedGraph/Assets/Scripts/UI/MenuManager.cs.meta" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.htc.upm.vive-input-utility@1.13.2/VRModule/Modules/SimulatorModule.cs" root0="SKIP_HIGHLIGHTING" />
@@ -60,14 +228,27 @@
       <option name="presentableId" value="Default" />
       <updated>1630599186565</updated>
       <workItem from="1630599196695" duration="644000" />
+      <workItem from="1630935888215" duration="5125000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
