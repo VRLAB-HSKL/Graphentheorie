@@ -46,7 +46,7 @@ namespace GraphContent
         public Matrix ParseInFile()
         {
             TextAsset json = Resources.Load("json/template", typeof(TextAsset)) as TextAsset;
-            Debug.Log(json);
+            // Debug.Log(json);
             Matrix templete = new Matrix();
             if (json is { })
             {
@@ -62,6 +62,11 @@ namespace GraphContent
             return res;
         }
 
+        /// <summary>
+        /// Saves provided Matrix in matrix.json
+        /// Test Method, Not implemented in main Program
+        /// </summary>
+        /// <param name="mat"></param>
         public void SaveJsonFile(Matrix mat)
         {
             var filePath = Application.dataPath + "/Resources/json/matrix.json";

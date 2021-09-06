@@ -39,10 +39,10 @@ namespace Manager
         /// <summary>
         /// Loads json File saved in the folder Resources.
         /// </summary>
-        public List<List<int>> LoadJsonFile()
+        public List<List<int>> LoadJsonFile(string fileName)
         {
-            TextAsset json = Resources.Load("json/nodes", typeof(TextAsset)) as TextAsset;
-            Debug.Log(json);
+            TextAsset json = Resources.Load("json/"+fileName, typeof(TextAsset)) as TextAsset;
+            // Debug.Log(json);
             List<List<int>> templete = new List<List<int>>();
             if (json is { })
             {

@@ -20,7 +20,8 @@ namespace GraphContent
         private DataManagerSingleton dataMgmt = DataManagerSingleton.Instance;
 
         private Graph graph;
-        
+        private Graph graphSmall;
+
 
         private void Start()
         {
@@ -28,19 +29,48 @@ namespace GraphContent
             _Graph.CreateRoot(rootName);
             ProvideInputs();
             var temp = dataMgmt.ParseInFile();
-            Debug.Log("Name : "+temp.Name + " , Size : " + temp.Size);
+            // Debug.Log("Name : "+temp.Name + " , Size : " + temp.Size);
 
             Matrix m = new Matrix();
             m.Name = "Test Matrix";
             m.Size = 10;
             var getM = dataMgmt.SaveJsonData(m);
-            Debug.Log(getM);
+            // Debug.Log(getM);
             dataMgmt.SaveJsonFile(m);
 
             JsonDataSerializer jsonDataSerializer = new JsonDataSerializer(JsonFileName);
             jsonDataSerializer.SaveJsonFile(graph.CreateAdjacencyList());
             
-            Debug.Log(jsonDataSerializer.LoadJsonFile());
+            // Debug.Log(jsonDataSerializer.LoadJsonFile(JsonFileName));
+            
+            ProvideSmallInputs();
+            JsonDataSerializer dataSerializer = new JsonDataSerializer("smallGraph");
+            dataSerializer.SaveJsonFile(graphSmall.CreateAdjacencyList());
+            
+            // Debug.Log(dataSerializer.LoadJsonFile("smallGraph"));
+        }
+
+        public void ProvideSmallInputs()
+        {
+            graphSmall = new Graph(Name);
+
+            var a = graphSmall.CreateRoot("A");
+            var b = graphSmall.CreateNode("B");
+            var c = graphSmall.CreateNode("C");
+            var d = graphSmall.CreateNode("D");
+            var e = graphSmall.CreateNode("E");
+            
+            a.AddEdge(b)
+                .AddEdge(c);
+
+            b.AddEdge(e)
+                .AddEdge(d);
+            d.AddEdge(e);
+       
+            //For the List Print
+            Console.WriteLine("--------------List Print----------------");
+            List<List<int>> res = graphSmall.CreateAdjacencyList();
+            PrintMain.PrintList(res);
         }
         
         public void ProvideInputs()
