@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json;
+using UndirectedGraph.Scripts.Subject;
 using UnityEngine;
 
 namespace Manager
@@ -49,6 +50,11 @@ namespace Manager
                 templete = JsonConvert.DeserializeObject<List<List<int>>>(json.text);
             }
             return templete;
+        }
+
+        public void SaveJsonFile(MatrixData data)
+        {
+            
         }
     }
 }
