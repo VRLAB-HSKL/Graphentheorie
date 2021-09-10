@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0270104b-2a67-4f66-a2eb-ef6fb66e2564" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/Subject/MatrixData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/Subject/MatrixData.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GraphVisualization/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GraphVisualization/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Exercise-1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Exercise-1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/GraphGen/Create3DNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/GraphGen/Create3DNode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/GraphMono.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/GraphMono.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/Manager/JsonDataSerializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/Manager/JsonDataSerializer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/Subject/MatrixData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/Subject/MatrixData.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +30,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34994584" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -51,10 +53,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="18420">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="18420" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -75,7 +77,7 @@
       <workItem from="1630942817645" duration="285000" />
       <workItem from="1631220624320" duration="2865000" />
       <workItem from="1631259530058" duration="1379000" />
-      <workItem from="1631266482567" duration="465000" />
+      <workItem from="1631266482567" duration="8299000" />
     </task>
     <servers />
   </component>

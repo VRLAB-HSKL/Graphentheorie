@@ -12,6 +12,7 @@ namespace GraphGen
         [SerializeField] private GameObject EdgePrefab;
 
         [SerializeField] private Material _material;
+        [SerializeField] private string fileName;
 
         /// <summary>
         /// Creates a new Node with Gameobject as well Edges connected to each valid Node with Edge weight value 

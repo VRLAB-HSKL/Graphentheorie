@@ -5,6 +5,7 @@ using Manager;
 using Subject;
 using UnityEngine;
 using UnityEngine.UI;
+using Vector3 = System.Numerics.Vector3;
 
 namespace GraphContent
     /// <summary>
@@ -38,16 +39,39 @@ namespace GraphContent
             var getM = dataMgmt.SaveJsonData(m);
             // Debug.Log(getM);
             dataMgmt.SaveJsonFile(m);
-
-            JsonDataSerializer jsonDataSerializer = new JsonDataSerializer(JsonFileName);
-            jsonDataSerializer.SaveJsonFile(graph.CreateAdjacencyList());
+            //
+            // JsonDataSerializer jsonDataSerializer = new JsonDataSerializer(JsonFileName);
+            // jsonDataSerializer.SaveJsonFile(graph.CreateAdjacencyList());
             
             // Debug.Log(jsonDataSerializer.LoadJsonFile(JsonFileName));
             
             ProvideSmallInputs();
-            JsonDataSerializer dataSerializer = new JsonDataSerializer("smallGraph");
-            dataSerializer.SaveJsonFile(graphSmall.CreateAdjacencyList());
+            // JsonDataSerializer dataSerializer = new JsonDataSerializer("smallGraph");
+            // dataSerializer.SaveJsonFile(graphSmall.CreateAdjacencyList());
             
+            //save MatrixData
+            JsonDataSerializer dsMatrixData = new JsonDataSerializer(JsonFileName);
+            MatrixData matrixData = new MatrixData();
+            matrixData.name = "TestMatrix";
+            matrixData.nodes = graphSmall.CreateAdjacencyList();
+            matrixData.nodeNames = new List<string>{"Primasens","Zweibrücken","Kaiserslautern"};
+
+            matrixData.nodePositions.Add(new Vector3(1,0,1));
+            matrixData.nodePositions.Add(new Vector3(2,0,1));
+            matrixData.nodePositions.Add(new Vector3(3,0,2));
+            matrixData.nodePositions.Add(new Vector3(4,0,2));
+            matrixData.nodePositions.Add(new Vector3(5,0,3));
+            var listData = new Dictionary<string, MatrixData>();
+            listData.Add("A1",matrixData);
+            matrixData.name = "TestMatrix2";
+            listData.Add("A2",matrixData);
+
+            dsMatrixData.SaveJsonFile(listData);
+            
+            JsonDataSerializer dsLoadMatrixData = new JsonDataSerializer(JsonFileName);
+            var loadMatrixDataJson = dsLoadMatrixData.LoadMatrixDataJson();
+            Debug.Log("Name : "+loadMatrixDataJson.Count);
+            Debug.Log("Loaded Data : "+loadMatrixDataJson);
             // Debug.Log(dataSerializer.LoadJsonFile("smallGraph"));
             
             //get wrong answers
@@ -63,6 +87,8 @@ namespace GraphContent
                 });
                 Debug.Log(txt);
             });
+            
+            
         }
 
         public void ProvideSmallInputs()
@@ -195,6 +221,24 @@ namespace GraphContent
             }
 
             matrixText.text += "\r\n";
+        }
+
+        public void LoadMatrixDataInScene(Text txt)
+        {
+            Debug.Log("Button Clicked!");
+            JsonDataSerializer dsLoadMatrixData = new JsonDataSerializer(JsonFileName);
+            var loadMatrixDataJson = dsLoadMatrixData.LoadMatrixDataJson();
+
+            foreach (var node in loadMatrixDataJson)
+            {
+                txt.text += node.Key+"\n";
+                txt.text += Graph.GetStringValue(node.Value.nodes);
+            }
+            // txt.text = loadMatrixDataJson.nodeNames.ForEach();
+            // loadMatrixDataJson.nodeNames.ForEach(elem =>
+            // {
+            //     txt.text += elem + " , ";
+            // });
         }
     }
 }

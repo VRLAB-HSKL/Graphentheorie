@@ -1965,6 +1965,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1302705612879779105, guid: d58534f973af4c74d91be8801ddf8592, type: 3}
+      propertyPath: fileName
+      value: MatrixDataTest
+      objectReference: {fileID: 0}
     - target: {fileID: 1302705612879779106, guid: d58534f973af4c74d91be8801ddf8592, type: 3}
       propertyPath: m_Name
       value: NodeViewManager
@@ -3973,7 +3977,7 @@ PrefabInstance:
       objectReference: {fileID: 1892889145}
     - target: {fileID: 6910340052744935914, guid: d0893bdb3693cef438f683ff42ab3f60, type: 3}
       propertyPath: JsonFileName
-      value: TestMatrix
+      value: MatrixDataFile
       objectReference: {fileID: 0}
     - target: {fileID: 6910340052744935915, guid: d0893bdb3693cef438f683ff42ab3f60, type: 3}
       propertyPath: m_Name
