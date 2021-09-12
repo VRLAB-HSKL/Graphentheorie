@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using Manager;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 namespace GraphGen
 {
@@ -15,6 +17,7 @@ namespace GraphGen
         [SerializeField] private string fileName;
         [SerializeField] private string jsonBlockName;
         [SerializeField] private Material startingPointMat;
+        [SerializeField] private TextMeshPro displayText;
 
         /// <summary>
         /// Creates a new Node with Gameobject as well Edges connected to each valid Node with Edge weight value 
@@ -58,26 +61,36 @@ namespace GraphGen
                     startingPoint = graph.Value.startingPoint;
                 }
             }
-            
-            // var prefabs = InstantiateNode(data.Count);
-            var prefabs = InstantiateNode(pos,names);
-            //change start node color
-            StartingPoint(startingPoint,prefabs);
-            for (int i = 0; i < data.Count; i++)
+
+            if (!CheckSymmetries(data))
             {
-                for (int j = 0; j < data.Count; j++)
+                displayText.text = "Provided Matrix is not Symmetrical.";
+                Debug.Log("Provided Matrix is not Symmetrical.");
+            }
+            else
+            {
+                // var prefabs = InstantiateNode(data.Count);
+                var prefabs = InstantiateNode(pos,names);
+                //change start node color
+                StartingPoint(startingPoint,prefabs);
+                for (int i = 0; i < data.Count; i++)
                 {
-                    if (data[i][j] == 1)
+                    for (int j = 0; j < data.Count; j++)
                     {
-                        DrawEdgeLine(prefabs[i].transform.position, prefabs[j].transform.position,
-                            new Color(150, 150, 150));
+                        if (data[i][j] == 1)
+                        {
+                            DrawEdgeLine(prefabs[i].transform.position, prefabs[j].transform.position,
+                                new Color(150, 150, 150));
+                        }
                     }
                 }
             }
             
+            
         }
         /// <summary>
         /// Instantiates the provided Node Prefab and saves it as a Gameobject in a List
+        /// Instantiates in a Circle View
         /// </summary>
         /// <param name="data">Number of total Nodes</param>
         /// <returns></returns>
@@ -100,7 +113,12 @@ namespace GraphGen
 
             return prefabs;
         }
-
+        /// <summary>
+        /// Instantiates the provided Node Prefab and saves it as a Gameobject in a List
+        /// Instantiates in a the Position provided in JSON
+        /// </summary>
+        /// <param name="data">Number of total Nodes</param>
+        /// <returns></returns>
         private List<GameObject> InstantiateNode(List<System.Numerics.Vector3> positions, List<string> names)
         {
             var prefabs = new List<GameObject>();
@@ -125,7 +143,11 @@ namespace GraphGen
 
             return prefabs;
         }
-
+/// <summary>
+/// Changes material of the Starting Point
+/// </summary>
+/// <param name="name"></param>
+/// <param name="prefabs"></param>
         public void StartingPoint(string name, List<GameObject> prefabs)
         {
             prefabs.ForEach(elem =>
@@ -155,6 +177,30 @@ namespace GraphGen
             lr.SetWidth(0.1f, 0.1f);
             lr.SetPosition(0, start);
             lr.SetPosition(1, end);
+        }
+
+        /// <summary>
+        /// Checks the Validity of the Matrix, whereby to function a Symmetrical Matrix is required. 
+        /// </summary>
+        /// <param name="matrix"></param>
+        /// <returns></returns>
+        public bool CheckSymmetries(List<List<int>> matrix)
+        {
+            for (int i = 0; i < matrix.Count; i++)
+            {
+                if (matrix.Count != matrix[i].Count)
+                {
+                    return false;
+                }
+                for (int j = 0; j < matrix[i].Count; j++)
+                {
+                    if (matrix[i][j] != matrix[j][i])
+                    {
+                        return false;
+                    }
+                }
+            }
+            return true;
         }
     }
 }
