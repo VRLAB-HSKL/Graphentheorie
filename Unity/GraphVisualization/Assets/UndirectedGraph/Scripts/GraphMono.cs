@@ -61,9 +61,12 @@ namespace GraphContent
             matrixData.nodePositions.Add(new Vector3(3,0,2));
             matrixData.nodePositions.Add(new Vector3(4,0,2));
             matrixData.nodePositions.Add(new Vector3(5,0,3));
+            matrixData.nodePositions.Add(new Vector3(5,0,4));
             var listData = new Dictionary<string, MatrixData>();
+            matrixData.startingPoint = "D";
             listData.Add("A1",matrixData);
             matrixData.name = "TestMatrix2";
+            matrixData.startingPoint = "A";
             listData.Add("A2",matrixData);
 
             dsMatrixData.SaveJsonFile(listData);
@@ -100,6 +103,7 @@ namespace GraphContent
             var c = graphSmall.CreateNode("C");
             var d = graphSmall.CreateNode("D");
             var e = graphSmall.CreateNode("E");
+            var f = graphSmall.CreateNode("E");
             
             a.AddEdge(b)
                 .AddEdge(c);
@@ -107,6 +111,7 @@ namespace GraphContent
             b.AddEdge(e)
                 .AddEdge(d);
             d.AddEdge(e);
+            e.AddEdge(f);
        
             //For the List Print
             Console.WriteLine("--------------List Print----------------");
