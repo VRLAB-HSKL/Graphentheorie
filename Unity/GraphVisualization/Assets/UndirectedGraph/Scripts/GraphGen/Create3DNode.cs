@@ -13,14 +13,16 @@ namespace GraphGen
 
         [SerializeField] private Material _material;
         [SerializeField] private string fileName;
+        [SerializeField] private string jsonBlockName;
+        [SerializeField] private Material startingPointMat;
 
         /// <summary>
         /// Creates a new Node with Gameobject as well Edges connected to each valid Node with Edge weight value 
         /// </summary>
         public void CreateNode()
         {
-            JsonDataSerializer dataSerializer = new JsonDataSerializer("smallGraph");
-            var data = dataSerializer.LoadJsonFile("smallGraph");
+            JsonDataSerializer dataSerializer = new JsonDataSerializer(fileName);
+            var data = dataSerializer.LoadJsonFile(fileName);
 
             var prefabs = InstantiateNode(data.Count);
 
@@ -35,6 +37,44 @@ namespace GraphGen
                     }
                 }
             }
+        }
+
+        public void CreateGraphFromData()
+        {
+            JsonDataSerializer dataSerializer = new JsonDataSerializer(fileName);
+            var matrixDict = dataSerializer.LoadMatrixDataJson();
+            var data = new List<List<int>>();
+            List<System.Numerics.Vector3> pos = null;
+            List<string> names = null;
+            string startingPoint = null;
+
+            foreach (var graph in matrixDict)
+            {
+                if (graph.Key.Contains(jsonBlockName))
+                {
+                    data = graph.Value.nodes;
+                    pos = graph.Value.nodePositions;
+                    names = graph.Value.nodeNames;
+                    startingPoint = graph.Value.startingPoint;
+                }
+            }
+            
+            // var prefabs = InstantiateNode(data.Count);
+            var prefabs = InstantiateNode(pos,names);
+            //change start node color
+            StartingPoint(startingPoint,prefabs);
+            for (int i = 0; i < data.Count; i++)
+            {
+                for (int j = 0; j < data.Count; j++)
+                {
+                    if (data[i][j] == 1)
+                    {
+                        DrawEdgeLine(prefabs[i].transform.position, prefabs[j].transform.position,
+                            new Color(150, 150, 150));
+                    }
+                }
+            }
+            
         }
         /// <summary>
         /// Instantiates the provided Node Prefab and saves it as a Gameobject in a List
@@ -61,6 +101,41 @@ namespace GraphGen
             return prefabs;
         }
 
+        private List<GameObject> InstantiateNode(List<System.Numerics.Vector3> positions, List<string> names)
+        {
+            var prefabs = new List<GameObject>();
+
+            for (int i = 0; i < positions.Count; i++)
+            {
+                Vector3 newPos = new Vector3(positions[i].X,positions[i].Y+5f,positions[i].Z);
+                GameObject pfab = Instantiate(NodePrefab, newPos, Quaternion.identity);
+                if (names.Count != positions.Count)
+                {
+                    var remain = positions.Count - names.Count;
+                    int nameVal = 65;
+                    for (int j = 0; j < remain; j++)
+                    {
+                        names.Add( System.Convert.ToChar(nameVal++).ToString());
+                    }
+                }
+                pfab.name = names[i];
+                pfab.GetComponentInChildren<TextMesh>().text = names[i];
+                prefabs.Add(pfab);
+            }
+
+            return prefabs;
+        }
+
+        public void StartingPoint(string name, List<GameObject> prefabs)
+        {
+            prefabs.ForEach(elem =>
+            {
+                if (elem.name.Contains(name))
+                {
+                    elem.GetComponent<Renderer>().material = startingPointMat;
+                }
+            });
+        }
         /// <summary>
         /// Creates new Line for the connected Edge
         /// </summary>

@@ -12,6 +12,7 @@ namespace GraphContent
         /// </summary>
         public List<List<int>> nodes;
         public string name;
+        public string startingPoint;
         public List<string> nodeNames;
         public List<Vector3> nodePositions = new List<Vector3>();
     }
