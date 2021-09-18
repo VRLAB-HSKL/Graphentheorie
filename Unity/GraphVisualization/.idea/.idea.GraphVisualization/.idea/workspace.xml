@@ -6,9 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="0270104b-2a67-4f66-a2eb-ef6fb66e2564" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GraphVisualization/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GraphVisualization/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/json/Algebra.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/json/Algebra.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Exercise-1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Exercise-1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/GraphGen/Create3DNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/GraphGen/Create3DNode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/Subject/Graph.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/Subject/Graph.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,9 +27,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PortalDoor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.htc.upm.vive-input-utility@1.13.2/VRModule/Modules/SimulatorModule.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/MBU/Examples/7 Design Pattern/Observer/Scripts/Clock.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1xahb54YvrSWckrdhYIDsJsqYmG" />
   <component name="ProjectViewState">
@@ -45,6 +56,8 @@
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="Inspections-ASP.NET" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -83,7 +96,10 @@
       <workItem from="1631220624320" duration="2865000" />
       <workItem from="1631259530058" duration="1379000" />
       <workItem from="1631266482567" duration="12009000" />
-      <workItem from="1631357194090" duration="9007000" />
+      <workItem from="1631357194090" duration="9255000" />
+      <workItem from="1631649468237" duration="831000" />
+      <workItem from="1631961393103" duration="860000" />
+      <workItem from="1631962525353" duration="2996000" />
     </task>
     <servers />
   </component>

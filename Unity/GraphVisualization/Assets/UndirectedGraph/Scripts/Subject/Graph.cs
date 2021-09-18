@@ -5,7 +5,7 @@ using GraphContent;
 
 public class Graph
 {
-    public Node Root;
+    public Node _root;
     private string _name;
     public List<Node> _allNodes = new List<Node>();
 
@@ -17,7 +17,7 @@ public class Graph
     {
         _name = name;
     }
-    
+
     /// <summary>
     /// A new Node will be created and added to the total Node Container
     /// @param: name : Name of the new Node which will be created
@@ -34,8 +34,8 @@ public class Graph
     /// </summary>
     public Node CreateRoot(string name)
     {
-        Root = CreateNode(name);
-        return Root;
+        _root = CreateNode(name);
+        return _root;
     }
 
     /// <summary>
@@ -67,6 +67,7 @@ public class Graph
 
         return adj;
     }
+
     /// <summary>
     /// Creates Adjacency List from the Nodes and Root
     /// </summary>
@@ -92,34 +93,87 @@ public class Graph
                 {
                     temp.Add(0);
                 }
-                
             }
-            
+
             result.Add(temp);
         }
 
         return result;
-
     }
 
+    /// <summary>
+    /// provided list of data will be saved as a string and returned.
+    /// Usage : showing text data in view
+    /// </summary>
+    /// <param name="data">List of Nodes with their values in it</param>
+    /// <returns></returns>
     public static string GetStringValue(List<List<int>> data)
     {
         string res = "";
         data.ForEach(elem =>
         {
             res += "[ ";
-            elem.ForEach(val =>
-            {
-                res += val + " ,";
-            });
+            elem.ForEach(val => { res += val + " ,"; });
 
             res += " ]\n";
         });
         return res;
     }
-    
+
+    /// <summary>
+    /// Getters and Setters / Properties
+    /// </summary>
+    public Node Root
+    {
+        get => _root;
+        set => _root = value;
+    }
+
+    public string Name
+    {
+        get => _name;
+        set => _name = value;
+    }
+
+    public List<Node> AllNodes
+    {
+        get => _allNodes;
+        set => _allNodes = value;
+    }
+
+    /// <summary>
+    /// returns Total Nos of Nodes
+    /// </summary>
+    /// <returns></returns>
+    public int NodeSize()
+    {
+        return _allNodes.Count;
+    }
+
+    /// <summary>
+    /// counts one edge if both node has connection with each other
+    /// </summary>
+    /// <returns>total number of Edges connected to different Nodes</returns>
+    public int TotalEdges()
+    {
+        var matrix = CreateAdjacencyList();
+        var size = 0;
+        for (int i = 0; i < matrix.Count; i++)
+        {
+            for (int j = 0; j < matrix[i].Count; j++)
+            {
+                if (matrix[i][j] == matrix[j][i])
+                {
+                    size++;
+                }
+            }
+        }
+
+        return size;
+    }
+
     public override string ToString()
     {
-        return "Name " + _name + "AllNodes " + _allNodes.ToString();
+        return $"{nameof(_root)}: {_root}, {nameof(_name)}: {_name}, {nameof(_allNodes)}: {_allNodes}";
     }
 }
