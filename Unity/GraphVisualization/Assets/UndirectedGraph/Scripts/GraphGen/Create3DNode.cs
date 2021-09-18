@@ -70,9 +70,9 @@ namespace GraphGen
             else
             {
                 // var prefabs = InstantiateNode(data.Count);
-                var prefabs = InstantiateNode(pos,names);
+                var prefabs = InstantiateNode(pos, names);
                 //change start node color
-                StartingPoint(startingPoint,prefabs);
+                StartingPoint(startingPoint, prefabs);
                 for (int i = 0; i < data.Count; i++)
                 {
                     for (int j = 0; j < data.Count; j++)
@@ -85,16 +85,14 @@ namespace GraphGen
                     }
                 }
             }
-            
-            
         }
+
         /// <summary>
         /// Instantiates the provided Node Prefab and saves it as a Gameobject in a List
         /// Instantiates in a Circle View
         /// </summary>
         /// <param name="data">Number of total Nodes</param>
         /// <returns></returns>
-
         private List<GameObject> InstantiateNode(int index)
         {
             List<GameObject> prefabs = new List<GameObject>();
@@ -110,9 +108,9 @@ namespace GraphGen
                 pfab.GetComponentInChildren<TextMesh>().text = name;
                 prefabs.Add(pfab);
             }
-
             return prefabs;
         }
+
         /// <summary>
         /// Instantiates the provided Node Prefab and saves it as a Gameobject in a List
         /// Instantiates in a the Position provided in JSON
@@ -125,7 +123,7 @@ namespace GraphGen
 
             for (int i = 0; i < positions.Count; i++)
             {
-                Vector3 newPos = new Vector3(positions[i].X,positions[i].Y+5f,positions[i].Z);
+                Vector3 newPos = new Vector3(positions[i].X, positions[i].Y + 5f, positions[i].Z);
                 GameObject pfab = Instantiate(NodePrefab, newPos, Quaternion.identity);
                 if (names.Count != positions.Count)
                 {
@@ -133,9 +131,10 @@ namespace GraphGen
                     int nameVal = 65;
                     for (int j = 0; j < remain; j++)
                     {
-                        names.Add( System.Convert.ToChar(nameVal++).ToString());
+                        names.Add(System.Convert.ToChar(nameVal++).ToString());
                     }
                 }
+
                 pfab.name = names[i];
                 pfab.GetComponentInChildren<TextMesh>().text = names[i];
                 prefabs.Add(pfab);
@@ -143,11 +142,12 @@ namespace GraphGen
 
             return prefabs;
         }
-/// <summary>
-/// Changes material of the Starting Point
-/// </summary>
-/// <param name="name"></param>
-/// <param name="prefabs"></param>
+
+        /// <summary>
+        /// Changes material of the Starting Point
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="prefabs"></param>
         public void StartingPoint(string name, List<GameObject> prefabs)
         {
             prefabs.ForEach(elem =>
@@ -158,6 +158,7 @@ namespace GraphGen
                 }
             });
         }
+
         /// <summary>
         /// Creates new Line for the connected Edge
         /// </summary>
@@ -192,6 +193,7 @@ namespace GraphGen
                 {
                     return false;
                 }
+
                 for (int j = 0; j < matrix[i].Count; j++)
                 {
                     if (matrix[i][j] != matrix[j][i])
@@ -200,6 +202,7 @@ namespace GraphGen
                     }
                 }
             }
+
             return true;
         }
     }
