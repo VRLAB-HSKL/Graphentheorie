@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using GraphContent;
+using UndirectedGraph.Scripts.Subject;
 
 public class Graph
 {
@@ -170,6 +171,56 @@ public class Graph
         }
 
         return size;
+    }
+
+    /// <summary>
+    /// JSON Graph Data to Graph Nodes and Edges
+    /// Note : Not Functional 
+    /// </summary>
+    /// <returns></returns>
+    ///
+    public Graph CreateGraph(MatrixData matrixData)
+    {
+        CreateRoot(matrixData.startingPoint);
+        List<Node> nodesGen = new List<Node>(); 
+        
+        CreateNodesFromNames();
+        CreateEdges();
+        
+        void CreateEdges()
+        {
+            for (int i = 0; i < matrixData.nodes.Count; i++)
+            {
+                for (int j = 0; j < matrixData.nodes[i].Count; j++)
+                {
+                    if (matrixData.nodes[i][j] == matrixData.nodes[j][i])
+                    {
+                        if (!matrixData.nodeNames[j].Contains(matrixData.nodeNames[i]))
+                        {
+                            nodesGen[i].AddEdge(nodesGen[j]);
+                        }
+                    }
+                }
+            }
+        }
+        
+        void CreateNodesFromNames()
+        {
+            var nameVal = 65;
+            for (int i = 0; i < matrixData.nodes.Count; i++)
+            {
+                if (matrixData.nodeNames[i] != null)
+                {
+                    nodesGen.Add(CreateNode(matrixData.nodeNames[i]));
+                }
+                else
+                {
+                    nodesGen.Add(CreateNode(System.Convert.ToChar(nameVal++).ToString()));
+                }
+            }
+        }
+
+        return this;
     }
 
     public override string ToString()

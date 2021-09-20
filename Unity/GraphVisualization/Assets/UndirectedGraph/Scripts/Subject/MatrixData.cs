@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Numerics;
 
-namespace GraphContent
+namespace UndirectedGraph.Scripts.Subject
 {
     public class MatrixData
     {
