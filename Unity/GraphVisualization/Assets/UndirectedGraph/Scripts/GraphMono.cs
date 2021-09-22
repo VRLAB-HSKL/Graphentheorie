@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using GraphGen;
 using Manager;
 using Subject;
+using UndirectedGraph.Scripts.Subject;
 using UnityEngine;
 using UnityEngine.UI;
 using Vector3 = System.Numerics.Vector3;
@@ -91,7 +92,29 @@ namespace GraphContent
                 Debug.Log(txt);
             });
             
+            //test for euler graph 
             
+            List<List<int>> euler = new List<List<int>>();
+
+            euler.Add(new List<int>(){0, 1, 1, 1, 0});
+            euler.Add(new List<int>(){1, 0, 1, 0, 0});
+            euler.Add(new List<int>() {1, 1, 0, 0, 0});
+            euler.Add(new List<int>(){1, 0, 0, 0, 1});
+            euler.Add(new List<int>(){0, 0, 0, 1, 0});
+
+            EulerGraph eulerGraph = new EulerGraph("EulerGraph")
+            {
+                Matrix = euler
+            };
+            Debug.Log(eulerGraph.IsEulerian());
+            Debug.Log(eulerGraph.IsEulerianText());
+
+
+
+
+            //test for Angles
+            MatrixDataManager matrixDataManager = new MatrixDataManager(matrixData);
+            matrixDataManager.GetAngle(1);
         }
 
         public void ProvideSmallInputs()

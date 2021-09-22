@@ -1,4 +1,6 @@
-﻿namespace GraphContent
+﻿using GraphContent;
+
+namespace UndirectedGraph.Scripts.Subject
 {
     public class Edge
     {

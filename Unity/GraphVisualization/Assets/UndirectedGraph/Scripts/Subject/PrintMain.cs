@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace GraphContent
+namespace UndirectedGraph.Scripts.Subject
 {
     public class PrintMain
     {

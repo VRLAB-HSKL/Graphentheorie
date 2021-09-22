@@ -6,10 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="0270104b-2a67-4f66-a2eb-ef6fb66e2564" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GraphVisualization/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GraphVisualization/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Exercise-1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Exercise-1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/GraphGen/Create3DNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/GraphGen/Create3DNode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/Subject/EulerGraph.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/Subject/EulerGraph.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/Subject/Graph.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/Subject/Graph.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/Subject/MatrixDataManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/Subject/MatrixDataManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -99,7 +98,10 @@
       <workItem from="1631357194090" duration="9255000" />
       <workItem from="1631649468237" duration="831000" />
       <workItem from="1631961393103" duration="860000" />
-      <workItem from="1631962525353" duration="2996000" />
+      <workItem from="1631962525353" duration="12617000" />
+      <workItem from="1632129494857" duration="2251000" />
+      <workItem from="1632134129434" duration="10439000" />
+      <workItem from="1632331105586" duration="1417000" />
     </task>
     <servers />
   </component>

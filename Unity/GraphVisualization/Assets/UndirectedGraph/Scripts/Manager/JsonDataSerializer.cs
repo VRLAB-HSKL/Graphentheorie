@@ -2,6 +2,7 @@
 using System.IO;
 using GraphContent;
 using Newtonsoft.Json;
+using UndirectedGraph.Scripts.Subject;
 using UnityEngine;
 
 namespace Manager
@@ -59,7 +60,7 @@ namespace Manager
         /// Saves Json Data in a File in the Assets/Resources/json folder
         /// </summary>
         /// <param name="data"></param>
-        public void SaveJsonFile(Dictionary<string,MatrixData> data)
+        public void SaveJsonFile(Dictionary<string, MatrixData> data)
         {
             var filePath = Application.dataPath + "/Resources/json/" + FileName + ".json";
             // serialize JSON to a string and then write string to a file
@@ -76,23 +77,29 @@ namespace Manager
             }
         }
 
-        public Dictionary<string,MatrixData> LoadMatrixDataJson(string fileName)
+        /// <summary>
+        /// Loads Data saved in a JSON Data from provided file name
+        /// </summary>
+        /// <param name="fileName"></param>
+        /// <returns></returns>
+        public Dictionary<string, MatrixData> LoadMatrixDataJson(string fileName)
         {
             TextAsset json = Resources.Load("json/" + fileName, typeof(TextAsset)) as TextAsset;
             // Debug.Log(json);
-            Dictionary<string,MatrixData> templete = new Dictionary<string, MatrixData>();
+            Dictionary<string, MatrixData> templete = new Dictionary<string, MatrixData>();
             if (json is { })
             {
-                templete = JsonConvert.DeserializeObject<Dictionary<string,MatrixData>>(json.text, new JsonSerializerSettings()
-                {
-                    ReferenceLoopHandling = ReferenceLoopHandling.Ignore
-                });
+                templete = JsonConvert.DeserializeObject<Dictionary<string, MatrixData>>(json.text,
+                    new JsonSerializerSettings()
+                    {
+                        ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+                    });
             }
 
             return templete;
         }
 
-        public Dictionary<string,MatrixData> LoadMatrixDataJson()
+        public Dictionary<string, MatrixData> LoadMatrixDataJson()
         {
             return LoadMatrixDataJson(FileName);
         }
