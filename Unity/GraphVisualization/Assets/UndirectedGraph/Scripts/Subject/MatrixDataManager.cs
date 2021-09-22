@@ -56,5 +56,27 @@ namespace UndirectedGraph.Scripts.Subject
             }
             return 0.0f;
         }
+
+        public Dictionary<int, List<int>> Connections()
+        {
+            Dictionary<int,List<int>> res = new Dictionary<int, List<int>>();
+
+            for (int i = 0; i < _matrixData.nodes.Count; i++)
+            {
+                List<int> connectList = new List<int>();
+                for (int j = 0; j < _matrixData.nodes.Count; j++)
+                {
+                    if (true)
+                    {
+                        if (_matrixData.nodes[i][j]  == 1)
+                        {
+                            connectList.Add(j);
+                        }
+                    }
+                }
+                res.Add(i,connectList);
+            }
+            return res;
+        }
     }
 }

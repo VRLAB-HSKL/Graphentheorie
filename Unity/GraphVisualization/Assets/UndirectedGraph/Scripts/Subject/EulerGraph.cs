@@ -2,9 +2,21 @@
 
 namespace UndirectedGraph.Scripts.Subject
 {
+    /// <summary>
+    /// EulerGraph is still a sub class of Graph and Provides extra Properties of the Euler into a Graph.
+    /// </summary>
     public class EulerGraph : Graph
     {
         private List<List<int>> _matrix = null;
+        private int[] _degrees;
+        /// <summary>
+        /// IsEulerian() method should be called first inorder to Calculate the EulerDegrees.
+        /// </summary>
+        public int[] Degrees
+        {
+            get => _degrees;
+            set => _degrees = value;
+        }
 
         public List<List<int>> Matrix
         {
@@ -13,6 +25,7 @@ namespace UndirectedGraph.Scripts.Subject
         }
 
         /// <summary>
+        /// Default Constructor 
         /// Mandatory : Call ConvertToMatrix() or initialize Matrix in order to function
         /// </summary>
         /// <param name="name"></param>
@@ -21,7 +34,7 @@ namespace UndirectedGraph.Scripts.Subject
         }
 
         /// <summary>
-        ///
+        /// Checks the Graph Matrix of the Attribute _matrix weather it has Euler Graph/Circuit
         /// 
         /// </summary>
         /// <returns>
@@ -31,7 +44,7 @@ namespace UndirectedGraph.Scripts.Subject
         /// </returns>
         public int IsEulerian()
         {
-            int[] connections = new int[_matrix.Count];
+            _degrees = new int[_matrix.Count];
             int oddDegree = 0;
             if (!IsConnected())
             {
@@ -44,11 +57,11 @@ namespace UndirectedGraph.Scripts.Subject
                 {
                     if (_matrix[i][j] == 1)
                     {
-                        connections[i]++;
+                        _degrees[i]++;
                     }
                 }
 
-                if (connections[i] % 2 != 0)
+                if (_degrees[i] % 2 != 0)
                 {
                     oddDegree++;
                 }

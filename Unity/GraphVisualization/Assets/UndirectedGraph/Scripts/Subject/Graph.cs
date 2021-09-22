@@ -12,7 +12,7 @@ public class Graph
 
 
     /// <summary>
-    /// 
+    /// Default Constructor with Graph Name 
     /// </summary>
     public Graph(string name)
     {
