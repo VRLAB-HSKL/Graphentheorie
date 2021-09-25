@@ -4,6 +4,7 @@ using TMPro;
 using UndirectedGraph.Scripts.Subject;
 using UnityEngine;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 namespace UndirectedGraph.Scripts.UI
 {
@@ -26,8 +27,12 @@ namespace UndirectedGraph.Scripts.UI
         [SerializeField] private GameObject panel;
         [Tooltip("A Text Area where the Message Text should be Displayed.")]
         [SerializeField] private TextMeshPro answerCheckDisplay;
+        [FormerlySerializedAs("vrCamera")]
         [Tooltip("A Default Camera to show the Dialog Panel.")]
-        [SerializeField] private Camera vrCamera;
+        [SerializeField] private GameObject panelPlaceholder;
+
+        [SerializeField] private Material success;
+        [SerializeField] private Material fail;
         
         private DataManagerSingleton _dataManager = DataManagerSingleton.Instance;
         
@@ -52,10 +57,13 @@ namespace UndirectedGraph.Scripts.UI
             if (GetResult(AnswersManager.GetAnswerType(answerName)))
             {
                 answerCheckDisplay.text = "Clicked Answer is right! \n :- " + answerName;
+                panel.GetComponent<Image>().material = success;
+
             }
             else
             {
                 answerCheckDisplay.text = "Clicked Answer is wrong! \n :- " + answerName;
+                panel.GetComponent<Image>().material = fail;
             }
             
         }
@@ -64,11 +72,11 @@ namespace UndirectedGraph.Scripts.UI
         {
             if (state)
             {
-                var transform1 = vrCamera.transform;
-                panel.transform.position = transform1.position + new Vector3(10, 0, 10);
+                var transform1 = panelPlaceholder.transform;
+                // panel.transform.position = transform1.position + new Vector3(10, 0, 10);
                 //panel.transform.rotation = transform1.rotation;
                 
-                Vector3 relativePos = transform1.position - panel.transform.position;
+                // Vector3 relativePos = transform1.position - panel.transform.position;
 
                 // the second argument, upwards, defaults to Vector3.up
                 //Quaternion rotation = Quaternion.LookRotation(relativePos, Vector3.up);
@@ -79,10 +87,13 @@ namespace UndirectedGraph.Scripts.UI
                 
 
                 // the second argument, upwards, defaults to Vector3.up
-                Quaternion rotation = Quaternion.LookRotation(relativePos, new Vector3(0,1,0));
-                vrCamera.transform.rotation = rotation*Quaternion.Euler(0,90,0);   
+                // Quaternion rotation = Quaternion.LookRotation(relativePos, new Vector3(0,1,0));
+                // vrCamera.transform.rotation = rotation*Quaternion.Euler(0,90,0);   
 
                 //vrCamera.transform.LookAt(panel.transform);
+
+                panel.transform.position = panelPlaceholder.transform.position;
+                panel.transform.rotation = panelPlaceholder.transform.rotation;
             }
         }
 

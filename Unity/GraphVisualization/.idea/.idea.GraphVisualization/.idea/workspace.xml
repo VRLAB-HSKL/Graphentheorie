@@ -5,16 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0270104b-2a67-4f66-a2eb-ef6fb66e2564" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/Subject/AnswerType.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/Subject/AnswerType.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GraphVisualization/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GraphVisualization/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/json/VorlesungGraphen.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/json/VorlesungGraphen.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Exercise-1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Exercise-1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/DataManagerSingleton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/DataManagerSingleton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/GraphGen/Create3DNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/GraphGen/Create3DNode.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/UI/AnswerChecker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/UI/AnswerChecker.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/UI/AnswersManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/UI/AnswersManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +105,7 @@
       <workItem from="1632134129434" duration="10439000" />
       <workItem from="1632331105586" duration="10041000" />
       <workItem from="1632422765589" duration="9964000" />
-      <workItem from="1632571892998" duration="10560000" />
+      <workItem from="1632571892998" duration="12809000" />
     </task>
     <servers />
   </component>
