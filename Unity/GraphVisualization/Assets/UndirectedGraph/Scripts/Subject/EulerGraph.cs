@@ -9,6 +9,7 @@ namespace UndirectedGraph.Scripts.Subject
     {
         private List<List<int>> _matrix = null;
         private int[] _degrees;
+
         /// <summary>
         /// IsEulerian() method should be called first inorder to Calculate the EulerDegrees.
         /// </summary>
@@ -153,6 +154,32 @@ namespace UndirectedGraph.Scripts.Subject
             }
 
             return result;
+        }
+
+        /// <summary>
+        /// Implementation of HandShaking Concept of Euler Graph
+        /// </summary>
+        /// <returns>true if the sum of all corner degrees is equal to twice the number of edges</returns>
+        public bool HandShaking()
+        {
+            if (_matrix == null)
+            {
+                return false;
+            }
+
+            IsEulerian();
+            int sum = 0;
+            for (int i = 0; i < Degrees.Length; i++)
+            {
+                sum += Degrees[i];
+            }
+
+            if ((2 * _matrix.Count) == sum)
+            {
+                return true;
+            }
+
+            return false;
         }
     }
 }

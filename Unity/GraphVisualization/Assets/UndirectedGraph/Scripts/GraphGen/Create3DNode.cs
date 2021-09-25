@@ -108,6 +108,7 @@ namespace GraphGen
                 pfab.GetComponentInChildren<TextMesh>().text = name;
                 prefabs.Add(pfab);
             }
+
             return prefabs;
         }
 
@@ -174,7 +175,10 @@ namespace GraphGen
             LineRenderer lr = edge.GetComponent<LineRenderer>();
             edge.name = name;
             lr.material = _material;
+        #pragma warning disable 618
             lr.SetColors(color, color);
+        #pragma warning restore 618
+
             lr.SetWidth(0.1f, 0.1f);
             lr.SetPosition(0, start);
             lr.SetPosition(1, end);

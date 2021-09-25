@@ -110,6 +110,10 @@ public class Graph
     /// <returns></returns>
     public static string GetStringValue(List<List<int>> data)
     {
+        if (data == null)
+        {
+            return "No Data";
+        }
         string res = "";
         data.ForEach(elem =>
         {
