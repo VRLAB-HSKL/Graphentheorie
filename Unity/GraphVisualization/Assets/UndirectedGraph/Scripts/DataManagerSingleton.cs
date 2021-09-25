@@ -2,6 +2,7 @@
 using System.IO;
 using Newtonsoft.Json;
 using Subject;
+using UndirectedGraph.Scripts.Subject;
 using UnityEngine;
 
 namespace GraphContent
@@ -14,14 +15,10 @@ namespace GraphContent
         private static DataManagerSingleton _instance = null;
         private static readonly object Padlock = new object();
 
-        private bool _menuState = false;
+        public AnswerType RightAnswer { get; set; } = AnswerType.None;
 
 
-        public bool MenuState
-        {
-            get { return _menuState; }
-            set { _menuState = value; }
-        }
+        public bool MenuState { get; set; } = false;
 
         private DataManagerSingleton()
         {
