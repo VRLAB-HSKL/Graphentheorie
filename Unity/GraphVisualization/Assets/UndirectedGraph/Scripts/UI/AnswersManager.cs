@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using GraphContent;
 using GraphGen;
 using Manager;
 using TMPro;
@@ -17,7 +18,8 @@ namespace UndirectedGraph.Scripts.UI
         [SerializeField] private string filename;
         [SerializeField] private List<TextMeshPro> textFields;
         [SerializeField] private Material _material;
-
+        private DataManagerSingleton _dataManager = DataManagerSingleton.Instance;
+       
         /// <summary>
         /// The observed object
         /// </summary>
@@ -81,6 +83,35 @@ namespace UndirectedGraph.Scripts.UI
         private void FixedUpdate()
         {
             Model.Process();
+        }
+
+        public Dictionary<AnswerType, string> BoardAnswers()
+        {
+            Dictionary<AnswerType, string> answers = new Dictionary<AnswerType, string>();
+            textFields.ForEach(elem =>
+            {
+                answers.Add(GetAnswerType(elem.name),elem.text);
+            });
+
+            return answers;
+        }
+        
+        public static AnswerType GetAnswerType(string value)
+        {
+            switch (value)
+            {
+                case "A":
+                    return AnswerType.AnswerA;
+                    break;
+                case "B":
+                    return AnswerType.AnswerB;
+                    break;
+                case "C":
+                    return AnswerType.AnswerC;
+                    break;
+                default:
+                    return AnswerType.None;
+            }
         }
     }
 }

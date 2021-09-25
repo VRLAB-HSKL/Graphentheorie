@@ -1,7 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using GraphContent;
 using Manager;
 using TMPro;
+using UndirectedGraph.Scripts.UI;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -10,6 +13,12 @@ namespace GraphGen
 {
     public class Create3DNode : MonoBehaviour
     {
+        [Header("Generates 3D Node from JSON")] 
+        
+        [TextArea]
+        [SerializeField]
+        private string Note = "This gameobject generates the particular block of Graph of the provided jsonBlockName from the given Json fileName.";
+
         [SerializeField] private GameObject NodePrefab;
         [SerializeField] private GameObject EdgePrefab;
 
@@ -18,6 +27,12 @@ namespace GraphGen
         [SerializeField] private string jsonBlockName;
         [SerializeField] private Material startingPointMat;
         [SerializeField] private TextMeshPro displayText;
+        private DataManagerSingleton _dataManager = DataManagerSingleton.Instance;
+
+        private void Awake()
+        {
+            _dataManager.RightAnswer = AnswersManager.GetAnswerType(jsonBlockName);
+        }
 
         /// <summary>
         /// Creates a new Node with Gameobject as well Edges connected to each valid Node with Edge weight value 
