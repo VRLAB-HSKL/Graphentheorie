@@ -8,6 +8,7 @@ using UnityEngine.Serialization;
 public class LoadLevelDoor : MonoBehaviour
 {
     [FormerlySerializedAs("scenename")] [SerializeField] private PortalDoor door;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +24,7 @@ public class LoadLevelDoor : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Door Entered");
+        door.VRCamera.transform.position = new Vector3(0,0,0);
         SceneManager.LoadScene(door.Scenename);
     }
 }

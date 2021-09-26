@@ -4424,7 +4424,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af423ecf52e64554a4710368cb7b0526, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  filename: choosegraph/VorlesungGraphen
+  filename: choosegraph/VorlesungGraphen1
   textFields:
   - {fileID: 409551856}
   - {fileID: 727158194}
@@ -5180,7 +5180,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1302705612879779105, guid: d58534f973af4c74d91be8801ddf8592, type: 3}
       propertyPath: fileName
-      value: choosegraph/VorlesungGraphen
+      value: choosegraph/VorlesungGraphen1
       objectReference: {fileID: 0}
     - target: {fileID: 1302705612879779105, guid: d58534f973af4c74d91be8801ddf8592, type: 3}
       propertyPath: displayText
