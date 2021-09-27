@@ -37,5 +37,7 @@ namespace UndirectedGraph.Scripts.Subject
             }
             Notify();
         }
+
+        
     }
 }

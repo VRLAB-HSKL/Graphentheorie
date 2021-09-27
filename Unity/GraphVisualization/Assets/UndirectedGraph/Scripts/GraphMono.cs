@@ -27,6 +27,7 @@ namespace GraphContent
         private Graph graph;
         private Graph graphSmall;
 
+        [Header("These two fields Node 3D and AnswerManager are Mandatory.")]
         [SerializeField] private Create3DNode node3D;
 
         [SerializeField] private AnswersManager answersManager;
@@ -37,7 +38,7 @@ namespace GraphContent
             _Graph.CreateRoot(rootName);
             ProvideInputs();
             node3D.CreateGraphFromData();
-            answersManager.CreateAllRandomAnswers();
+            
         }
 
         /// <summary>
@@ -45,6 +46,10 @@ namespace GraphContent
         /// </summary>
         private void Start()
         {
+            answersManager.CreateAllRandomAnswers();
+            
+            //-------------tests------------
+            
             var temp = dataMgmt.ParseInFile();
             // Debug.Log("Name : "+temp.Name + " , Size : " + temp.Size);
 

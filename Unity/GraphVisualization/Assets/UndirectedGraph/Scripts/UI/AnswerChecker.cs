@@ -147,5 +147,48 @@ namespace UndirectedGraph.Scripts.UI
                 elem.GetComponent<Light>().color = Color.blue;
             });
         }
+
+        public void EulerPath(GameObject go)
+        {
+            if (manager.CheckEulerPath())
+            {
+                Debug.Log("has Euler Path");
+                go.GetComponent<Image>().color = Color.green;
+            }
+            else
+            {
+                Debug.Log("Does not have Euler Path");
+                go.GetComponent<Image>().color = Color.red;
+            }
+
+        }
+
+        public void EulerCircuit(GameObject go)
+        {
+            if (manager.CheckEulerCircuit())
+            {
+                Debug.Log("has Euler Circuit");
+                go.GetComponent<Image>().color = Color.green;
+            }
+            else
+            {
+                Debug.Log("Does not have Euler Circuit");
+                go.GetComponent<Image>().color = Color.red;
+            }
+        }
+        
+        public void HandShaking(GameObject go)
+        {
+            if (manager.CheckEulerCircuit())
+            {
+                Debug.Log("has Euler Circuit");
+                go.GetComponent<Image>().color = Color.green;
+            }
+            else
+            {
+                Debug.Log("Does not have Euler Circuit");
+                go.GetComponent<Image>().color = Color.red;
+            }
+        }
     }
 }
