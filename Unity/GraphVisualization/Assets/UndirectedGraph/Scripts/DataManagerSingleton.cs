@@ -16,6 +16,8 @@ namespace GraphContent
         private static readonly object Padlock = new object();
 
         public AnswerType RightAnswer { get; set; } = AnswerType.None;
+        
+        public string FileName { get; set; }
 
 
         public bool MenuState { get; set; } = false;

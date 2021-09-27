@@ -37,7 +37,7 @@
         0
       ]
     ],
-    "name": "TestMatrix2",
+    "name": "TestMatrix1",
     "startingPoint": "e",
     "nodeNames": [
       "a",
@@ -95,7 +95,7 @@
         0,
         0,
         1,
-        1
+        0
       ],
       [
         0,
@@ -107,7 +107,7 @@
       [
         0,
         0,
-        1,
+        0,
         1,
         0
       ]
@@ -161,13 +161,13 @@
       [
         1,
         0,
-        0,
+        1,
         1,
         0
       ],
       [
         1,
-        0,
+        1,
         0,
         1,
         1
@@ -187,7 +187,7 @@
         0
       ]
     ],
-    "name": "TestMatrix2",
+    "name": "TestMatrix3",
     "startingPoint": "e",
     "nodeNames": [
       "a",

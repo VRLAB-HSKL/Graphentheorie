@@ -5,9 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0270104b-2a67-4f66-a2eb-ef6fb66e2564" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Euler Circuit.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Euler Circuit.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Euler Path.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Euler Path.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Euler.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Euler.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Hand Shaking.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Hand Shaking.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Exercise-1-old.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Exercise-1-old.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Exercise-2-old.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Exercise-2-old.unity.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GraphVisualization/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GraphVisualization/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/json/choosegraph/VorlesungGraphen2.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/json/choosegraph/VorlesungGraphen2.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Exercise-1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Exercise-1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Exercise-1.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Exercise-1.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Exercise-2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Exercise-2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Exercise-2.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Exercise-2.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Exercise-3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Exercise-3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu3D.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu3D.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PortalDoor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PortalDoor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/DataManagerSingleton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/DataManagerSingleton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/GraphGen/Create3DNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/GraphGen/Create3DNode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/GraphMono.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/GraphMono.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/Subject/Answer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/Subject/Answer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/UI/AnswerChecker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/UI/AnswerChecker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/UI/AnswersManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UndirectedGraph/Scripts/UI/AnswersManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,20 +58,32 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PortalDoor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.4.8/Editor/Window/TimelineWindow_HeaderGui.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.htc.upm.vive-input-utility@1.13.2/VRModule/Modules/SimulatorModule.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Runtime/Graphic/MaskTests.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.4.8/Editor/Shortcuts.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.vscode@1.2.3/Editor/ProjectGeneration/ProjectGeneration.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Controls/InputControl.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@10.5.1/Editor/Util/IndexSet.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.test-framework@1.1.29/UnityEngine.TestRunner/NUnitExtensions/TestExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PortalDoor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.test-framework@1.1.29/UnityEditor.TestRunner/GUI/Views/TestListGUIBase.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Runtime/NestedLayout/SceneWithNestedLayoutElementsLoadScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Runtime/Graphic/MaskTests.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.htc.upm.vive-input-utility@1.13.2/VRModule/Editor/VRModuleManagerEditor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.4.8/Runtime/TimelinePlayable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/MBU/Examples/7 Design Pattern/Observer/Scripts/Clock.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.settings-manager@1.0.3/Editor/UserSettingsProvider.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1xahb54YvrSWckrdhYIDsJsqYmG" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34994584" />
     <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="Discover.Launch.Via.Unity" value="true" />
@@ -106,6 +143,10 @@
       <workItem from="1632331105586" duration="10041000" />
       <workItem from="1632422765589" duration="9964000" />
       <workItem from="1632571892998" duration="12809000" />
+      <workItem from="1632661395512" duration="6761000" />
+      <workItem from="1632672433581" duration="1806000" />
+      <workItem from="1632741243390" duration="1142000" />
+      <workItem from="1632742889837" duration="7312000" />
     </task>
     <servers />
   </component>
@@ -128,6 +169,7 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
 </project>

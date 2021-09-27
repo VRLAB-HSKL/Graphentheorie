@@ -32,6 +32,7 @@ namespace GraphGen
         private void Awake()
         {
             _dataManager.RightAnswer = AnswersManager.GetAnswerType(jsonBlockName);
+            _dataManager.FileName = fileName;
         }
 
         /// <summary>
