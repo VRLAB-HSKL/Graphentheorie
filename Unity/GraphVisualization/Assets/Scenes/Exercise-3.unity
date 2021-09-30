@@ -39307,6 +39307,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hand Shaking
       objectReference: {fileID: 0}
+    - target: {fileID: 1153056996663564182, guid: b40d0a366f4b88542bf09c2b3d52b833, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1153056996663564183, guid: b40d0a366f4b88542bf09c2b3d52b833, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

@@ -226,6 +226,7 @@ public class Graph
 
         return this;
     }
+    
 
     public override string ToString()
     {
