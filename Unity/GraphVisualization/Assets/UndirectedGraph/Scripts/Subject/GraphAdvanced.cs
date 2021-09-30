@@ -3,9 +3,9 @@
 namespace UndirectedGraph.Scripts.Subject
 {
     /// <summary>
-    /// EulerGraph is still a sub class of Graph and Provides extra Properties of the Euler into a Graph.
+    /// GraphAdvanced is still a sub class of Graph and Provides extra Properties of the Euler into a Graph.
     /// </summary>
-    public class EulerGraph : Graph
+    public class GraphAdvanced : Graph
     {
         private List<List<int>> _matrix = null;
         private int[] _degrees;
@@ -30,7 +30,7 @@ namespace UndirectedGraph.Scripts.Subject
         /// Mandatory : Call ConvertToMatrix() or initialize Matrix in order to function
         /// </summary>
         /// <param name="name"></param>
-        public EulerGraph(string name) : base(name)
+        public GraphAdvanced(string name) : base(name)
         {
         }
 
@@ -157,7 +157,7 @@ namespace UndirectedGraph.Scripts.Subject
         }
 
         /// <summary>
-        /// Implementation of HandShaking Concept of Euler Graph
+        /// Implementation of HandShaking Concept Graph Theory
         /// </summary>
         /// <returns>true if the sum of all corner degrees is equal to twice the number of edges</returns>
         public bool HandShaking()

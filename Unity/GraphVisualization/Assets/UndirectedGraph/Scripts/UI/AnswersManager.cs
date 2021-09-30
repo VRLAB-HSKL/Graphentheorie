@@ -14,12 +14,15 @@ using Random = UnityEngine.Random;
 
 namespace UndirectedGraph.Scripts.UI
 {
+    /// <summary>
+    /// An Observer class which provides which should be attached to a Gameobject , in order to load the matrix data in provided Text fields. 
+    /// </summary>
     public class AnswersManager : Observer
     {
         [SerializeField] private List<TextMeshPro> textFields;
         [SerializeField] private Material _material;
         private DataManagerSingleton _dataManager = DataManagerSingleton.Instance;
-       
+
         /// <summary>
         /// The observed object
         /// </summary>
@@ -32,23 +35,17 @@ namespace UndirectedGraph.Scripts.UI
             {
                 Thread.Sleep(5);
             }
-            Model = new Answer() { Filename = _dataManager.FileName, DataSerializer = new JsonDataSerializer(_dataManager.FileName) };
+
+            Model = new Answer()
+                { Filename = _dataManager.FileName, DataSerializer = new JsonDataSerializer(_dataManager.FileName) };
             Model.Attach(this);
         }
 
+        /// <summary>
+        /// Loads all the Node block from JSON and distributes it to all 3 Boards.
+        /// </summary>
         public void CreateAllRandomAnswers()
         {
-            //JsonDataSerializer dataSerializer = new JsonDataSerializer("smallGraph");
-            //var graphSmall = dataSerializer.LoadJsonFile("smallGraph");
-            //get wrong answers
-            //WrongAnswer answer = new WrongAnswer(Model.matrixData.Values.Count);
-            //Debug.Log(answer.GetWAnswer());
-
-            // foreach (var elem in Model.MatrixData)
-            // {
-            //     Model.NodeList.Add(elem.Value);
-            // }
-
             if (_dataManager.FileName == null)
             {
                 Thread.Sleep(505);
@@ -72,9 +69,12 @@ namespace UndirectedGraph.Scripts.UI
                     }
                 });
             }
-            
         }
 
+        /// <summary>
+        /// Changes material of provided GameObject
+        /// </summary>
+        /// <param name="board"></param>
         public void ChangeColor(GameObject board)
         {
             MeshRenderer meshRenderer = board.GetComponent<MeshRenderer>();
@@ -95,16 +95,18 @@ namespace UndirectedGraph.Scripts.UI
             Model.Process();
         }
 
+        /// <summary>
+        /// loads the textfields text and returns a Dictionary with key
+        /// </summary>
+        /// <returns></returns>
         public Dictionary<AnswerType, string> BoardAnswers()
         {
             Dictionary<AnswerType, string> answers = new Dictionary<AnswerType, string>();
-            textFields.ForEach(elem =>
-            {
-                answers.Add(GetAnswerType(elem.name),elem.text);
-            });
+            textFields.ForEach(elem => { answers.Add(GetAnswerType(elem.name), elem.text); });
 
             return answers;
         }
+
         /// <summary>
         /// returns the AnswerType from the String provided from unity editor
         /// </summary>
@@ -127,6 +129,7 @@ namespace UndirectedGraph.Scripts.UI
                     return AnswerType.None;
             }
         }
+
         public static string GetAnswerType(AnswerType value)
         {
             switch (value)
@@ -135,7 +138,7 @@ namespace UndirectedGraph.Scripts.UI
                     return "A";
                     break;
                 case AnswerType.AnswerB:
-                    return  "B";
+                    return "B";
                     break;
                 case AnswerType.AnswerC:
                     return "C";
@@ -144,11 +147,11 @@ namespace UndirectedGraph.Scripts.UI
                     return "";
             }
         }
-        
+
         public bool CheckEulerPath()
         {
             var eulerGraph = EulerGraphFunc();
-            
+
             if (eulerGraph.IsEulerian() == 1)
             {
                 return true;
@@ -156,34 +159,34 @@ namespace UndirectedGraph.Scripts.UI
 
             return false;
         }
-        
+
         public bool CheckEulerCircuit()
         {
             var eulerGraph = EulerGraphFunc();
-            
+
             if (eulerGraph.IsEulerian() == 2)
             {
                 return true;
             }
-            
+
             return false;
         }
 
         public bool HandShaking()
         {
             var eulerGraph = EulerGraphFunc();
-            
+
             if (eulerGraph.HandShaking())
             {
                 return true;
             }
-            
+
             return false;
         }
 
-        private EulerGraph EulerGraphFunc()
+        private GraphAdvanced EulerGraphFunc()
         {
-            var eulerGraph = new EulerGraph("EulerGraph")
+            var eulerGraph = new GraphAdvanced("EulerGraph")
             {
                 Matrix = Model.MatrixData[GetAnswerType(_dataManager.RightAnswer)].nodes
             };

@@ -63,7 +63,7 @@ namespace UndirectedGraph.Scripts.UI
 
             if (GetResult(AnswersManager.GetAnswerType(answerName)))
             {
-                answerCheckDisplay.text = "Clicked Answer is right! \n :- " + answerName;
+                answerCheckDisplay.text = "Selected Answer is right! \n You selected " + answerName;
                 panel.GetComponent<Image>().material = success;
                 //lights[answerName].color = new LinearColor()
                 //lights[GetIndex(answerName)].color = new LinearColor();
@@ -71,7 +71,7 @@ namespace UndirectedGraph.Scripts.UI
             }
             else
             {
-                answerCheckDisplay.text = "Clicked Answer is wrong! \n You selected " + answerName;
+                answerCheckDisplay.text = "Selected Answer is wrong! \n You selected " + answerName;
                 panel.GetComponent<Image>().material = fail;
                 lights[GetIndex(answerName)].GetComponent<Light>().color = Color.red;
             }

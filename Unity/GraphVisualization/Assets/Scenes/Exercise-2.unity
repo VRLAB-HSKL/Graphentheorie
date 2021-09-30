@@ -4434,7 +4434,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af423ecf52e64554a4710368cb7b0526, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  filename: choosegraph/VorlesungGraphen1
   textFields:
   - {fileID: 409551856}
   - {fileID: 727158194}
@@ -39337,6 +39336,10 @@ PrefabInstance:
     - target: {fileID: 1153056996663564182, guid: b40d0a366f4b88542bf09c2b3d52b833, type: 3}
       propertyPath: m_Name
       value: Hand Shaking
+      objectReference: {fileID: 0}
+    - target: {fileID: 1153056996663564182, guid: b40d0a366f4b88542bf09c2b3d52b833, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1153056996663564183, guid: b40d0a366f4b88542bf09c2b3d52b833, type: 3}
       propertyPath: m_Pivot.x

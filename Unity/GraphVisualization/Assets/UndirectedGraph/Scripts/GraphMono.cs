@@ -27,8 +27,8 @@ namespace GraphContent
         private Graph graph;
         private Graph graphSmall;
 
-        [Header("These two fields Node 3D and AnswerManager are Mandatory.")]
-        [SerializeField] private Create3DNode node3D;
+        [Header("These two fields Node 3D and AnswerManager are Mandatory.")] [SerializeField]
+        private Create3DNode node3D;
 
         [SerializeField] private AnswersManager answersManager;
 
@@ -38,7 +38,6 @@ namespace GraphContent
             _Graph.CreateRoot(rootName);
             ProvideInputs();
             node3D.CreateGraphFromData();
-            
         }
 
         /// <summary>
@@ -46,10 +45,11 @@ namespace GraphContent
         /// </summary>
         private void Start()
         {
+            //mandatory call
             answersManager.CreateAllRandomAnswers();
-            
+
             //-------------tests------------
-            
+
             var temp = dataMgmt.ParseInFile();
             // Debug.Log("Name : "+temp.Name + " , Size : " + temp.Size);
 
@@ -118,14 +118,17 @@ namespace GraphContent
             euler.Add(new List<int>() { 1, 0, 0, 0, 1 });
             euler.Add(new List<int>() { 0, 0, 0, 1, 0 });
 
-            EulerGraph eulerGraph = new EulerGraph("EulerGraph")
+            GraphAdvanced graphAdvanced = new GraphAdvanced("EulerGraph")
             {
                 Matrix = euler
             };
-            Debug.Log(eulerGraph.IsEulerian());
-            Debug.Log(eulerGraph.IsEulerianText());
+            Debug.Log(graphAdvanced.IsEulerian());
+            Debug.Log(graphAdvanced.IsEulerianText());
         }
 
+        /// <summary>
+        /// Generates the Nodes and Connections for the Test. 
+        /// </summary>
         public void ProvideSmallInputs()
         {
             graphSmall = new Graph(Name);
@@ -151,6 +154,9 @@ namespace GraphContent
             PrintMain.PrintList(res);
         }
 
+        /// <summary>
+        /// Generates the Nodes and Connections for the Test.
+        /// </summary>
         public void ProvideInputs()
         {
             graph = new Graph(Name);
@@ -224,6 +230,12 @@ namespace GraphContent
             PrintMain.PrintList(res);
         }
 
+        /// <summary>
+        /// Test method to print the provided matrix in the Scene where the data will be
+        /// loaded in matrixText Text. 
+        /// </summary>
+        /// <param name="matrix"></param>
+        /// <param name="Count"></param>
         private void PrintMatrix(ref int?[,] matrix, int Count)
         {
             matrixText.text += "   ";
@@ -260,6 +272,10 @@ namespace GraphContent
             matrixText.text += "\r\n";
         }
 
+        /// <summary>
+        /// Test method to load text in Scene where txt ist the parameter which is a Placeholder to show the Text in Scene.
+        /// </summary>
+        /// <param name="txt"></param>
         public void LoadMatrixDataInScene(Text txt)
         {
             Debug.Log("Button Clicked!");

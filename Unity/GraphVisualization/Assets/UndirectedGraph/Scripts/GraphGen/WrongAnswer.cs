@@ -3,6 +3,9 @@ using UnityEngine;
 
 namespace GraphGen
 {
+    /// <summary>
+    /// Generates a wrong answer, i.e. a square matrix of the specified size is created. 
+    /// </summary>
     public class WrongAnswer
     {
         private int size;
